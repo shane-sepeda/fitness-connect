@@ -9,4 +9,6 @@ Client.belongsTo(Trainer, {
   foreignKey: 'client_id',
 });
 
+
+
 module.exports = { Client, Trainer };
