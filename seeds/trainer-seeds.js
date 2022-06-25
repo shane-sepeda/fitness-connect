@@ -4,7 +4,7 @@ const trainerData = [
     {
         first_name: 'Sam',
         last_name: 'Tuttle',
-        username: 'a',
+        username: 'st',
         password: '',
         skills: 'fitness',
         client_id: '1'
@@ -12,7 +12,7 @@ const trainerData = [
     {
         first_name: 'Victoria',
         last_name: 'Secret',
-        username: 'b',
+        username: 'vs',
         password: '',
         skills: 'Yoga',
         client_id: '1'
@@ -21,7 +21,7 @@ const trainerData = [
     {
         first_name: 'Max',
         last_name: 'Headroom',
-        username: 'b',
+        username: 'mh',
         password: '',
         skills: 'Swimming',
         client_id: '1'
@@ -29,7 +29,7 @@ const trainerData = [
     {
         first_name: 'Mr',
         last_name: 'Bean',
-        username: 'a',
+        username: 'mb',
         password: '',
         skills: 'mental wellness',
         client_id: '1'
@@ -37,7 +37,7 @@ const trainerData = [
     {
         first_name: 'David',
         last_name: 'Robinson',
-        username: 'a',
+        username: 'dr',
         password: '',
         skills: 'Boxing',
         client_id: '1'
@@ -45,7 +45,7 @@ const trainerData = [
     {
         first_name: 'James',
         last_name: 'Franco',
-        username: 'a',
+        username: 'jf',
         password: '',
         skills: 'running',
         client_id: '1'
@@ -53,7 +53,7 @@ const trainerData = [
     {
         first_name: 'Dean',
         last_name: 'Martin',
-        username: 'a',
+        username: 'dm',
         password: '',
         skills: '',
         client_id: '1'
@@ -61,7 +61,7 @@ const trainerData = [
     {
         first_name: 'Billie',
         last_name: 'Eilish',
-        username: 'a',
+        username: 'be',
         password: '',
         skills: 'fitness',
         client_id: '1'
@@ -69,7 +69,7 @@ const trainerData = [
     {
         first_name: 'Paris',
         last_name: 'Hilton',
-        username: 'a',
+        username: 'ph',
         password: '',
         skills: 'fitness',
         client_id: '1'
