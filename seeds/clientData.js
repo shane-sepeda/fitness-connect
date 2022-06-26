@@ -1,14 +1,14 @@
-const {CLient} = require('../models');
-const Client = require('../models/Client');
+const { Client } = require('../models');
 
-const clientData = [
+
+const clientdata = [
     {
         first_name: 'Sammy',
         last_name: 'Travis',
         birth_date: '1999-05-12',
         address: '123 valley west',
         phone_no: '1234567890',
-        user_name: 'sammy',
+        username: 'sammy',
         password: '',
         interest: 'fitness',
         client_id: '1'
@@ -19,10 +19,10 @@ const clientData = [
         birth_date: '1999-05-12',
         address: '123 valley west',
         phone_no: '1234567890',
-        user_name: 'charles',
+        username: 'charles',
         password: '',
         interest: 'fitness',
-        client_id: '1'
+        client_id: '12'
     },
     {
         first_name: 'Thomas',
@@ -30,10 +30,10 @@ const clientData = [
         birth_date: '1999-05-12',
         address: '123 austin rd',
         phone_no: '1234567890',
-        user_name: 'thomas',
+        username: 'thomas',
         password: '',
         interest: 'fitness',
-        client_id: '1'
+        client_id: '13'
     },
     {
         first_name: 'Abraham',
@@ -41,10 +41,10 @@ const clientData = [
         birth_date: '1999-05-12',
         address: '456 lake ct',
         phone_no: '1234567890',
-        user_name: 'abraham',
+        username: 'abraham',
         password: '',
         interest: 'swimming',
-        client_id: '1'
+        client_id: '14'
     },
     {
         first_name: 'Oscar',
@@ -52,10 +52,10 @@ const clientData = [
         birth_date: '1999-05-12',
         address: '789 tide river',
         phone_no: '1234567890',
-        user_name: 'oscar',
+        username: 'oscar',
         password: '',
         interest: 'running',
-        client_id: '1'
+        client_id: '15'
     },
     {
         first_name: 'Jonas',
@@ -63,13 +63,13 @@ const clientData = [
         birth_date: '1999-05-12',
         address: '654 lady bird',
         phone_no: '1234567890',
-        user_name: 'jonas',
+        username: 'jonas',
         password: '',
         interest: 'yoga',
-        client_id: '1'
+        client_id: '17'
     }
 ];
 
-const seedClient = () => Client.bulkCreate(clientData);
+const seedClient = () => Client.bulkCreate(clientdata);
 
 module.exports = seedClient;

@@ -1,6 +1,6 @@
 const sequelize = require('../config/connections');
-const seedClient = require('./client-seeds');
-const seedTrainer = require('./trainer-seeds');
+const seedClient = require('./clientData');
+const seedTrainer = require('./trainerData');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });

@@ -25,7 +25,7 @@ Trainer.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -62,4 +62,4 @@ Trainer.init(
   }
 );
 
-module.exports = Client;
+module.exports = Trainer;

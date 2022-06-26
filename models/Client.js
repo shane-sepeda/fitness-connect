@@ -38,12 +38,12 @@ Client.init(
       allowNull: false,
 
     },
-    user_name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
-        isUser_name: true,
+        isUsername: true,
       },
     },
 

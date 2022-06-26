@@ -1,6 +1,6 @@
-const {Trainer} = require('../models');
+const { Trainer } = require('../models');
 
-const trainerData = [
+const trainerdata = [
     {
         first_name: 'Sam',
         last_name: 'Tuttle',
@@ -76,6 +76,6 @@ const trainerData = [
     }
 ];
 
-const seedTrainer = () => Trainer.bulkCreate(trainerData);
+const seedTrainer = () => Trainer.bulkCreate(trainerdata);
 
 module.exports = seedTrainer;
