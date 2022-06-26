@@ -1,77 +1,75 @@
-const {Trainer} = require('../models');
+const {CLient} = require('../models');
+const Client = require('../models/Client');
 
-const trainerData = [
+const clientData = [
     {
         first_name: 'Sammy',
         last_name: 'Travis',
-        username: 'a',
+        birth_date: '1999-05-12',
+        address: '123 valley west',
+        phone_no: '1234567890',
+        user_name: 'sammy',
         password: '',
         interest: 'fitness',
         client_id: '1'
     },
     {
-        first_name: 'Victoria',
-        last_name: 'Secret',
-        username: 'b',
+        first_name: 'Charles',
+        last_name: 'Wade',
+        birth_date: '1999-05-12',
+        address: '123 valley west',
+        phone_no: '1234567890',
+        user_name: 'charles',
         password: '',
-        skills: 'Yoga',
-        client_id: '1'
-    },
-
-    {
-        first_name: 'Max',
-        last_name: 'Headroom',
-        username: 'b',
-        password: '',
-        skills: 'Swimming',
+        interest: 'fitness',
         client_id: '1'
     },
     {
-        first_name: 'Mr',
-        last_name: 'Bean',
-        username: 'a',
+        first_name: 'Thomas',
+        last_name: 'Darwin',
+        birth_date: '1999-05-12',
+        address: '123 austin rd',
+        phone_no: '1234567890',
+        user_name: 'thomas',
         password: '',
-        skills: 'mental wellness',
+        interest: 'fitness',
         client_id: '1'
     },
     {
-        first_name: 'David',
-        last_name: 'Robinson',
-        username: 'a',
+        first_name: 'Abraham',
+        last_name: 'Bohannon',
+        birth_date: '1999-05-12',
+        address: '456 lake ct',
+        phone_no: '1234567890',
+        user_name: 'abraham',
         password: '',
-        skills: 'Boxing',
+        interest: 'swimming',
         client_id: '1'
     },
     {
-        first_name: 'James',
-        last_name: 'Franco',
-        username: 'a',
+        first_name: 'Oscar',
+        last_name: 'Wild',
+        birth_date: '1999-05-12',
+        address: '789 tide river',
+        phone_no: '1234567890',
+        user_name: 'oscar',
         password: '',
-        skills: 'running',
+        interest: 'running',
         client_id: '1'
     },
     {
-        first_name: 'Dean',
-        last_name: 'Martin',
-        username: 'a',
+        first_name: 'Jonas',
+        last_name: 'Austin',
+        birth_date: '1999-05-12',
+        address: '654 lady bird',
+        phone_no: '1234567890',
+        user_name: 'jonas',
         password: '',
-        skills: '',
-        client_id: '1'
-    },
-    {
-        first_name: 'Billie',
-        last_name: 'Eilish',
-        username: 'a',
-        password: '',
-        skills: 'fitness',
-        client_id: '1'
-    },
-    {
-        first_name: 'Paris',
-        last_name: 'Hilton',
-        username: 'a',
-        password: '',
-        skills: 'fitness',
+        interest: 'yoga',
         client_id: '1'
     }
 ];
+
+const seedClient = () => Client.bulkCreate(clientData);
+
+module.exports = seedClient;

@@ -75,3 +75,7 @@ const trainerData = [
         client_id: '1'
     }
 ];
+
+const seedTrainer = () => Trainer.bulkCreate(trainerData);
+
+module.exports = seedTrainer;

@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
-const sequelize = require("../config/connection");
+const sequelize = require("../config/connections");
 
 class Client extends Model {
   checkPassword(loginPw) {
@@ -27,10 +27,10 @@ Client.init(
     birth_date: {
       type: DataTypes.DATEONLY,
       allowNull: false,
-      format: YYYY - MM - DD,
+      format: 'YYYY-MM-DD',
     },
     address: {
-      Type: DataTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     phone_no: {
