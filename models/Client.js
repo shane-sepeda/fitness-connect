@@ -59,6 +59,14 @@ Client.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+
+    trainer_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "trainer",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,

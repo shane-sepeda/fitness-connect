@@ -45,14 +45,7 @@ Trainer.init(
     skills: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    client_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "client[]",
-        key: "id",
-      },
-    },
+    }
   },
   {
     sequelize,

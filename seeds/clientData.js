@@ -11,7 +11,7 @@ const clientdata = [
         username: 'sammy',
         password: '',
         interest: 'fitness',
-        client_id: '1'
+        trainer_id: 1
     },
     {
         first_name: 'Charles',
@@ -22,7 +22,7 @@ const clientdata = [
         username: 'charles',
         password: '',
         interest: 'fitness',
-        client_id: '12'
+        trainer_id: 12
     },
     {
         first_name: 'Thomas',
@@ -33,7 +33,7 @@ const clientdata = [
         username: 'thomas',
         password: '',
         interest: 'fitness',
-        client_id: '13'
+        trainer_id: 13
     },
     {
         first_name: 'Abraham',
@@ -44,7 +44,7 @@ const clientdata = [
         username: 'abraham',
         password: '',
         interest: 'swimming',
-        client_id: '14'
+        trainer_id: 14
     },
     {
         first_name: 'Oscar',
@@ -55,7 +55,7 @@ const clientdata = [
         username: 'oscar',
         password: '',
         interest: 'running',
-        client_id: '15'
+        trainer_id: 15
     },
     {
         first_name: 'Jonas',
@@ -66,7 +66,7 @@ const clientdata = [
         username: 'jonas',
         password: '',
         interest: 'yoga',
-        client_id: '17'
+        trainer_id: 17
     }
 ];
 
