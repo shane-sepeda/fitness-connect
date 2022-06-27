@@ -7,7 +7,7 @@
 
 
 # User Story
-AS AN employee...
+AS AN employee of a phyiscal training facility or gym
 
 # Acceptance Criteria
 - Application uses a Node and Express back end and uses both GET and POST routes for retrieving and adding new data.
