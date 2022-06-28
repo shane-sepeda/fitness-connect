@@ -1,4 +1,4 @@
-const { STRING } = require('sequelize');
+//const { STRING } = require('sequelize');
 const { Client } = require('../models');
 
 

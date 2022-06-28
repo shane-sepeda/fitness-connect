@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const sequelize = require('./config/connections');
+const sequelize = require('./config/connections.js');
 //const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // const sess = {

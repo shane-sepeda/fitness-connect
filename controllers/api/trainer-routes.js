@@ -1,10 +1,9 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connections');
 const { Trainer, Client } = require('../../models');
-
+const withAuth = require('../../utils/auth.js');
 
 //get all trainers
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     console.log('======================');
     Trainer.findAll({
         attributes: { exclude: ['password'] }
