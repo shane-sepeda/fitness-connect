@@ -1,16 +1,18 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Post, User, Comment, Vote } = require('../models');
+const sequelize = require('../config/connections');
+const { Client, Trainer} = require('../models');
 
-// get all posts for homepage
+// get all clients for homepage
 router.get('/', (req, res) => {
   console.log('======================');
-  Post.findAll({
+  Client.findAll({
     attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
+      'first_name',
+      'last_name',
+      'birth_date',
+      'address',
+      'phone_no',
+
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
