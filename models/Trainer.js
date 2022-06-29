@@ -1,7 +1,7 @@
 
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
-const sequelize = require("../config/connection");
+const sequelize = require("../config/connections");
 
 class Trainer extends Model {
   checkPassword(loginPw) {
@@ -25,7 +25,7 @@ Trainer.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -45,14 +45,7 @@ Trainer.init(
     skills: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    client_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "client[]",
-        key: "id",
-      },
-    },
+    }
   },
   {
     sequelize,
@@ -62,4 +55,4 @@ Trainer.init(
   }
 );
 
-module.exports = Client;
+module.exports = Trainer;

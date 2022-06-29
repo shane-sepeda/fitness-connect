@@ -1,77 +1,90 @@
-const {Trainer} = require('../models');
+const { Trainer } = require('../models');
 
-const trainerData = [
+const trainerdata = [
     {
+        id: 1,
         first_name: 'Sam',
         last_name: 'Tuttle',
-        username: 'a',
-        password: '',
+        username: 'st',
+        password: 'aaaa',
         skills: 'fitness',
-        client_id: '1'
+    
     },
     {
+        id: 2,
         first_name: 'Victoria',
         last_name: 'Secret',
-        username: 'b',
-        password: '',
+        username: 'vs',
+        password: 'bbbb',
         skills: 'Yoga',
-        client_id: '1'
+        
     },
 
     {
+        id: 3,
         first_name: 'Max',
         last_name: 'Headroom',
-        username: 'b',
+        username: 'mh',
         password: '',
         skills: 'Swimming',
-        client_id: '1'
+       
     },
     {
+        id: 4,
         first_name: 'Mr',
         last_name: 'Bean',
-        username: 'a',
-        password: '',
+        username: 'mb',
+        password: 'cccc',
         skills: 'mental wellness',
-        client_id: '1'
+       
     },
     {
+        id: 5,
         first_name: 'David',
         last_name: 'Robinson',
-        username: 'a',
-        password: '',
+        username: 'dr',
+        password: 'dddd',
         skills: 'Boxing',
-        client_id: '1'
+        
     },
     {
+        id: 6,
         first_name: 'James',
         last_name: 'Franco',
-        username: 'a',
-        password: '',
+        username: 'jf',
+        password: 'eeee',
         skills: 'running',
-        client_id: '1'
+        
     },
     {
+        id: 7,
         first_name: 'Dean',
         last_name: 'Martin',
-        username: 'a',
-        password: '',
-        skills: '',
-        client_id: '1'
+        username: 'dm',
+        password: 'ffff',
+        skills: 'Dancing',
+        
     },
     {
+        id: 8,
         first_name: 'Billie',
         last_name: 'Eilish',
-        username: 'a',
-        password: '',
+        username: 'be',
+        password: 'gggg',
         skills: 'fitness',
-        client_id: '1'
+        
     },
     {
+        id: 9,
         first_name: 'Paris',
         last_name: 'Hilton',
-        username: 'a',
-        password: '',
+        username: 'ph',
+        password: 'hhhh',
         skills: 'fitness',
-        client_id: '1'
+        
     }
 ];
+
+const seedTrainer = () => Trainer.bulkCreate(trainerdata);
+
+module.exports = seedTrainer;
