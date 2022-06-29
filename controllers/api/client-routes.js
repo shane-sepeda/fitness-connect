@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Trainer, Client } = require('../../models');
+const { Client } = require('../../models');
 
 
 //get all clients

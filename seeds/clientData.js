@@ -12,8 +12,8 @@ const clientdata = [
         username: 'sammy',
         password: 'asdf',
         interest: 'fitness',
-        trainer_id: 1
-    }
+        id: 1
+    // },
     // {
     //     first_name: 'Charles',
     //     last_name: 'Wade',
@@ -21,10 +21,10 @@ const clientdata = [
     //     address: '123 valley west',
     //     phone_no: '1234567890',
     //     username: 'charles',
-    //     password: STRING,
+    //     password: 'some',
     //     interest: 'fitness',
     //     trainer_id: 12
-    // },
+    // // },
     // {
     //     first_name: 'Thomas',
     //     last_name: 'Darwin',
@@ -32,7 +32,7 @@ const clientdata = [
     //     address: '123 austin rd',
     //     phone_no: '1234567890',
     //     username: 'thomas',
-    //     password: STRING,
+    //     password: 'many',
     //     interest: 'fitness',
     //     trainer_id: 13
     // },
@@ -43,7 +43,7 @@ const clientdata = [
     //     address: '456 lake ct',
     //     phone_no: '1234567890',
     //     username: 'abraham',
-    //     password: STRING,
+    //     password: 'whatis',
     //     interest: 'swimming',
     //     trainer_id: 14
     // },
@@ -54,7 +54,7 @@ const clientdata = [
     //     address: '789 tide river',
     //     phone_no: '1234567890',
     //     username: 'oscar',
-    //     password: STRING,
+    //     password: 'note',
     //     interest: 'running',
     //     trainer_id: 15
     // },
@@ -65,10 +65,10 @@ const clientdata = [
     //     address: '654 lady bird',
     //     phone_no: '1234567890',
     //     username: 'jonas',
-    //     password: STRING,
+    //     password: 'done',
     //     interest: 'yoga',
     //     trainer_id: 17
-    // }
+    }
 ];
 
 const seedClient = () => Client.bulkCreate(clientdata);
