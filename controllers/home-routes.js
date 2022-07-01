@@ -44,12 +44,13 @@ router.get("/signup", (req, res) => {
 });
 
 //get a client by id
-router.get("/client/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   Client.findOne({
     where: {
       id: req.params.id,
     },
     attributes: [
+      "id",
       "first_name",
       "last_name",
       "birth_date",
