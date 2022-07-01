@@ -29,20 +29,6 @@ router.get("/", (req, res) => {
     });
 });
 
-//login
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  res.render("login");
-});
-
-//signup
-router.get("/signup", (req, res) => {
-  res.render("signup");
-});
-
 //get a client by id
 router.get("/client/:id", (req, res) => {
   Client.findOne({
@@ -82,5 +68,21 @@ router.get("/client/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
+
+//login
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
+});
+
+//signup
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
+
 
 module.exports = router;
