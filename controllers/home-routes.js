@@ -44,7 +44,7 @@ router.get("/signup", (req, res) => {
 });
 
 //get a client by id
-router.get("/:id", (req, res) => {
+router.get("/client/:id", (req, res) => {
   Client.findOne({
     where: {
       id: req.params.id,
