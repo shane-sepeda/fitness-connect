@@ -1,9 +1,10 @@
 const router = require("express").Router();
 const { Trainer, Client } = require("../../models");
-const withAuth = require("../../utils/auth.js");
+//const withAuth = require("../../utils/auth.js");
 
-//get all trainers
-router.get("/", withAuth, (req, res) => {
+//get all trainers excluded withAuth(middleware) for test
+//router.get("/"), withAuth, (req, res)....
+router.get("/", (req, res) => {
   console.log("======================");
   Trainer.findAll({
     attributes: { exclude: ["password"] },
@@ -60,19 +61,23 @@ router.get("/:id", (req, res) => {
 
 router.post("/login", (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
-  User.findOne({
+  User.create({
     where: {
       username: req.body.username,
+      password: req.body.password
     },
   }).then((dbTrainerData) => {
-    if (!dbTrainerData) {
-      res.status(400).json({ message: "No user with that username!" });
-      return;
-    }
+    req.session.save(() => {
+      req.session.user_id = dbTrainerData.id;
+      req.session.username = dbTrainerData.username;
+      req.session.loggedIn = true;
 
-    res.json({ user: dbTrainerData });
-
-    // Verify user
+      res.json(dbTrainerData);
+    });
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
