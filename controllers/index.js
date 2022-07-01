@@ -1,12 +1,9 @@
-const User = require('./Client');
-const Gallery = require('./Trainer');
+const router = require("express").Router();
 
-Trainer.hasMany(Client, {
-  foreignKey: 'client_id',
-});
+const apiRoutes = require("./api");
+const homeRoutes = require("./home-routes");
 
-Client.belongsTo(Trainer, {
-  foreignKey: 'client_id',
-});
+router.use("/api", apiRoutes);
+router.use("/", homeRoutes);
 
-module.exports = { Client, Trainer };
+module.exports = router;
