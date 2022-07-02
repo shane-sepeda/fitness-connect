@@ -1,4 +1,3 @@
-// const sequelize = require("../config/connections");
 const { Client, Trainer } = require("../models");
 const router = require("express").Router();
 
