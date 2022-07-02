@@ -1,5 +1,5 @@
 {
-  "name": "tech_blog",
+  "name": "fitness-connect",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salemiana/Tech_blog.git"
+    "url": "git+https://github.com/salemiana/fitness-connect.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/salemiana/Tech_blog/issues"
+    "url": "https://github.com/salemiana/fitness-connect/issues"
   },
-  "homepage": "https://github.com/salemiana/Tech_blog#readme",
+  "homepage": "https://github.com/salemiana/fitness-connect#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
