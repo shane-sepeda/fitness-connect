@@ -10,24 +10,11 @@
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
      <link href="dashboard.css" rel="stylesheet">
      <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-    <link href="./public/css/style.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
      {{!-- End Bootstrap Implement --}}
   </head>
   <body>
     {{> navbar}}
-    <div class="wrapper">
-      <header>
-        {{!-- <h1>
-          <a href="/">Fitness-Connect</a>
-        </h1> --}}
-        <nav>
-          {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">logout</button>
-          {{else}}
-            <a href="/login">login</a>
-          {{/if}}
-        </nav>
-      </header>
     <main>
       {{{ body }}}
     </main>
@@ -45,4 +32,4 @@
   {{!-- End Bootstrap core JavaScript --}}
   {{/if}}
   </body>
-</html>
+</html> 
