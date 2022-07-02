@@ -102,8 +102,6 @@ router.post("/login", (req, res) => {
     } 
   
     req.session.save(() => {
-      req.session.user_id = dbTrainerData.id;
-      req.session.username = dbTrainerData.username;
       req.session.loggedIn = true;
 
       res.json({ trainer: dbTrainerData,

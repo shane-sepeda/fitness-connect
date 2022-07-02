@@ -1,39 +1,14 @@
 const { Client, Trainer } = require("../models");
 const router = require("express").Router();
 
-//get all clients
-// router.get("/", (req, res) => {
-//   console.log(
-//     "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-//   );
-//   Client.findAll({
-//     attributes: [
-//       "first_name",
-//       "last_name",
-//       "birth_date",
-//       "address",
-//       "phone_no",
-//       "username",
-//       "interest",
-//       "trainer_id",
-//     ],
-//   })
-//     .then((dbClientData) => {
-//       const clients = dbClientData.map((client) => client.get({ plain: true }));
-//       res.render("homepage", { clients, loggedIn: req.session.loggedIn });
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+
 
 // render homepage
-router.get('/', (req,res) => {
+router.get('/',  (req,res) => {
     
-  if (req.session.logged) {
+  if (req.session.loggedIn) {
       res.render('homepage', {
-          logged: req.session.logged
+          loggedIn: req.session.loggedIn
       })
       return;
   };
