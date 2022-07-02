@@ -10,7 +10,7 @@
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
      <link href="dashboard.css" rel="stylesheet">
      <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-    <link href="public/css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
      {{!-- End Bootstrap Implement --}}
   </head>
   <body>
@@ -18,8 +18,8 @@
     <main>
       {{{ body }}}
     </main>
-    <footer>
-      Thanks for visiting!
+    <footer class = "navbar navbar-inverse navbar-fixed-bottom">
+            Thanks for visiting!
     </footer>
 
     {{#if loggedIn}}
