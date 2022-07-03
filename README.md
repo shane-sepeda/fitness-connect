@@ -1,14 +1,13 @@
 # fitness-connect
-"Connecting your workforce"
+
 # Overview
-CRM for Fitness & Health clients
+
 
 # Description
-CRMs are commonplace for any business, we wanted to test our skill sets and build a customer CRM for fitness trainers to efficiently connect with clients
 
 
 # User Story
-AS A fitness trainer, I want to securely manage a client database to oversee scheduling, fitness goals, and connect with other fitness trainers and locations
+AS AN employee...
 
 # Acceptance Criteria
 - Application uses a Node and Express back end and uses both GET and POST routes for retrieving and adding new data.
@@ -34,4 +33,3 @@ Shane Sepeda
 https://github.com/shane-sepeda/fitness-connect
 
 # Deployed webpage
-https://red-toque-41940.herokuapp.com/

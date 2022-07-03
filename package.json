@@ -1,27 +1,32 @@
 {
-  "name": "tech_blog",
+  "name": "fitness-connect",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salemiana/Tech_blog.git"
+    "url": "git+https://github.com/shane-sepeda/fitness-connect.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/salemiana/Tech_blog/issues"
+    "url": "https://github.com/shane-sepeda/fitness-connect/issues"
   },
-  "homepage": "https://github.com/salemiana/Tech_blog#readme",
+  "homepage": "https://github.com/shane-sepeda/fitness-connect#readme",
   "dependencies": {
-    "bootstrap": "^5.2.0-beta1",
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
+    "seed": "^0.4.4",
     "sequelize": "^6.21.0"
   }
 }
