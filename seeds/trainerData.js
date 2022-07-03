@@ -27,7 +27,6 @@ const trainerdata = [
        
     },
     {
-        id: 4,
         first_name: 'Mr',
         last_name: 'Bean',
         username: 'mb',
@@ -36,7 +35,6 @@ const trainerdata = [
        
     },
     {
-        id: 5,
         first_name: 'David',
         last_name: 'Robinson',
         username: 'dr',
