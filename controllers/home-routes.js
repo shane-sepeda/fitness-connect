@@ -7,7 +7,7 @@ const router = require("express").Router();
 router.get('/',  (req,res) => {
     
   if (req.session.loggedIn) {
-      res.render('homepage', {
+      res.render('dashboard', {
           loggedIn: req.session.loggedIn
       })
       return;

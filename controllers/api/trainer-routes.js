@@ -43,7 +43,6 @@ router.get("/:id", (req, res) => {
           "trainer_id",
         ],
       },
-      
     ],
   })
     .then((dbTrainerData) => {
@@ -59,59 +58,55 @@ router.get("/:id", (req, res) => {
     });
 });
 
-
-router.post('/', (req, res) => {
-  
+router.post("/", (req, res) => {
   Trainer.create({
     username: req.body.username,
-    password: req.body.password
+    password: req.body.password,
   })
-    .then(dbTrainerData => {
+    .then((dbTrainerData) => {
       req.session.save(() => {
-        req.session.trainer_id = dbTrainerData.id;
-        req.session.username = dbTrainerData.username;
-        req.session.loggedIn = true;
+      req.session.trainer_id = dbTrainerData.id;
+      req.session.username = dbTrainerData.username;
+      req.session.loggedIn = true;
 
         res.json(dbTrainerData);
       });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-
+//login-route
 router.post("/login", (req, res) => {
   Trainer.findOne({
     where: {
       username: req.body.username,
       //password: req.body.password
-    }
-  }).then(dbTrainerData => {
+    },
+  }).then((dbTrainerData) => {
     if (!dbTrainerData) {
-      res.status(400).json({ message: 'No trainer with that username!' });
+      res.status(400).json({ message: "No trainer with that username!" });
       return;
     }
 
     const validPassword = dbTrainerData.checkPassword(req.body.password);
-
+    console.log(validPassword);
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
+      res.status(400).json({ message: "Incorrect password!" });
       return;
-    } 
-  
+    }
+
     req.session.save(() => {
       req.session.loggedIn = true;
 
-      res.json({ trainer: dbTrainerData,
-        message: 'Welcome trainer!'});
+      res.json({ trainer: dbTrainerData, message: "Welcome trainer!" });
     });
   });
-
 });
 
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
@@ -121,47 +116,44 @@ router.post('/logout', (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
-
+router.put("/:id", (req, res) => {
   // pass in req.body instead to only update what's passed through
   Trainer.update(req.body, {
     individualHooks: true,
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+    },
   })
-    .then(dbTrainerData => {
+    .then((dbTrainerData) => {
       if (!dbTrainerData) {
-        res.status(404).json({ message: 'No trainer found with this id' });
+        res.status(404).json({ message: "No trainer found with this id" });
         return;
       }
       res.json(dbTrainerData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete("/:id", (req, res) => {
   Trainer.destroy({
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+    },
   })
-    .then(dbTrainerData => {
+    .then((dbTrainerData) => {
       if (!dbTrainerData) {
-        res.status(404).json({ message: 'No trainer found with this id' });
+        res.status(404).json({ message: "No trainer found with this id" });
         return;
       }
       res.json(dbTrainerData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
-
-  
 
 module.exports = router;

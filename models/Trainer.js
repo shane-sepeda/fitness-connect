@@ -28,10 +28,7 @@ Trainer.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        isUser_name: true
-      },
+      unique: true
     },
 
     password: {
@@ -44,7 +41,7 @@ Trainer.init(
 
     skills: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     }
   },
   {

@@ -76,6 +76,6 @@ const trainerdata = [
     }
 ];
 
-const seedTrainer = () => Trainer.bulkCreate(trainerdata);
+const seedTrainer = () => Trainer.bulkCreate(trainerdata, {individualHooks: true});
 
 module.exports = seedTrainer;
