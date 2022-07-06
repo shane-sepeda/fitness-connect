@@ -1,11 +1,43 @@
-# fitness-connect
-"Connecting your workforce"
-# Overview
-CRM for Fitness & Health clients
 
-# Description
+  <h1 align="center">Fitness-Connect</h1>
+
+  ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
+    
+
+## Table of contents
+- [Description](#description)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Installation](#installation)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
+    
+    
+## Description
 CRMs are commonplace for any business, we wanted to test our skill sets and build a customer CRM for fitness trainers to efficiently connect with clients
 
+## Usage
+Sequelize, node, handlebars, MVC
+
+
+## Contribution
+Salem Zerezghi
+
+Shane Sepeda
+
+Joe Henrickson
+
+Cristian Perez
+
+Ethan McCann
+
+## Installation
+npm i, mysql, npm run seed, npm start
+
+
+## License
+MIT
 
 # User Story
 AS A fitness trainer, I want to securely manage a client database to oversee scheduling, fitness goals, and connect with other fitness trainers and locations
@@ -17,21 +49,10 @@ AS A fitness trainer, I want to securely manage a client database to oversee sch
 - Application includes user authentication (express-session and cookies).
 - Application uses at least one new library, package, or technology not covered in class.
 
-# Team
-Salem Zerezghi
-Joe Henrickson
-Cristian Perez
-Ethan McCann
-Shane Sepeda
-
-# Assets
-
-
-# Screenshot
-
-
 # GitHub Repository
 https://github.com/shane-sepeda/fitness-connect
 
 # Deployed webpage
 https://red-toque-41940.herokuapp.com/
+
+# Screenshot
