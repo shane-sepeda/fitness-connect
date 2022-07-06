@@ -99,7 +99,9 @@ router.post("/login", (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.loggedIn = true,
+      req.session.first_name = dbTrainerData.dataValues.first_name;
+
 
       res.json({ trainer: dbTrainerData, message: "Welcome trainer!" });
     });

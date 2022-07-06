@@ -32,7 +32,11 @@ router.get("/", withAuth, (req, res) => {
   })
     .then((dbClientData) => {
       const clients = dbClientData.map((client) => client.get({ plain: true }));
-      res.render("dashboard", { clients, loggedIn: req.session.loggedIn });
+      console.log(req.session);
+      res.render("dashboard", { 
+        clients, loggedIn: req.session.loggedIn, 
+        f_name: req.session.first_name
+       });
     })
     .catch((err) => {
       console.log(err);
