@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const { Client, Trainer } = require("../models");
 
-const withAuth = require('../utils/auth')
+const withAuth = require("../utils/auth");
 // router.get('/', (req,res) => {
-    
+
 //     // if (req.session.logged) {
 //     //     res.render('dashboard', {
 //     //         logged: req.session.logged
@@ -13,7 +13,7 @@ const withAuth = require('../utils/auth')
 //     res.render('dashboard')
 //   });
 
-  //get all clients
+//get all clients
 router.get("/", withAuth, (req, res) => {
   console.log(
     "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -32,17 +32,17 @@ router.get("/", withAuth, (req, res) => {
   })
     .then((dbClientData) => {
       const clients = dbClientData.map((client) => client.get({ plain: true }));
-      console.log(req.session);
-      res.render("dashboard", { 
-        clients, loggedIn: req.session.loggedIn, 
-        f_name: req.session.first_name
-       });
+      console.log(clients);
+      res.render("dashboard", {
+        clients,
+        loggedIn: req.session.loggedIn,
+        f_name: req.session.first_name,
+      });
     })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
-    
 });
 
-  module.exports = router;
+module.exports = router;

@@ -9,7 +9,10 @@ router.get("/", (req, res) => {
   Trainer.findAll({
     attributes: { exclude: ["password"] },
   })
-    .then((dbTrainerData) => res.json(dbTrainerData))
+    .then((dbTrainerData) => {
+      console.log(dbTrainerData);
+      res.json(dbTrainerData);
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -25,10 +28,10 @@ router.get("/:id", (req, res) => {
       id: req.params.id,
     },
     include: [
-      {
-        model: Client,
-        attributes: ["id", "first_name", "last_name", "username", "interest"],
-      },
+      // {
+      //   model: Trainer,
+      //   attributes: ["id", "first_name", "last_name", "username", "skills"],
+      // },
       {
         model: Client,
         attributes: [
@@ -50,7 +53,13 @@ router.get("/:id", (req, res) => {
         res.status(404).json({ message: "No trainer found with this id" });
         return;
       }
-      res.json(dbTrainerData);
+      dbTrainerData = dbTrainerData.get({ plain: true });
+      console.log(dbTrainerData);
+      res.render("trainer", {
+        dbTrainerData,
+        loggedIn: req.session.loggedIn,
+        f_name: req.session.first_name,
+      });
     })
     .catch((err) => {
       console.log(err);
@@ -65,9 +74,9 @@ router.post("/", (req, res) => {
   })
     .then((dbTrainerData) => {
       req.session.save(() => {
-      req.session.trainer_id = dbTrainerData.id;
-      req.session.username = dbTrainerData.username;
-      req.session.loggedIn = true;
+        req.session.trainer_id = dbTrainerData.id;
+        req.session.username = dbTrainerData.username;
+        req.session.loggedIn = true;
 
         res.json(dbTrainerData);
       });
@@ -99,9 +108,8 @@ router.post("/login", (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.loggedIn = true,
-      req.session.first_name = dbTrainerData.dataValues.first_name;
-
+      (req.session.loggedIn = true),
+        (req.session.first_name = dbTrainerData.dataValues.first_name);
 
       res.json({ trainer: dbTrainerData, message: "Welcome trainer!" });
     });

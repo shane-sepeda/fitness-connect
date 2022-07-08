@@ -122,3 +122,7 @@ select {
 .page-header {
   margin-top: 150px;
 }
+
+.client-data h2 {
+  margin: 100px 100px;
+}
