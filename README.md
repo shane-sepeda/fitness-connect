@@ -53,6 +53,6 @@ AS A fitness trainer, I want to securely manage a client database to oversee sch
 https://github.com/shane-sepeda/fitness-connect
 
 # Deployed webpage
-https://red-toque-41940.herokuapp.com/
+https://arcane-brook-73511.herokuapp.com/
 
 # Screenshot![screencapture-arcane-brook-73511-herokuapp-2022-07-06-17_36_40](https://user-images.githubusercontent.com/101297588/177660668-8c4be9f2-c848-4650-9290-d2615423071b.png)
