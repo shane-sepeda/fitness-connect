@@ -11,7 +11,7 @@ const clientdata = [
     username: "sammy",
     password: "asdf",
     interest: "fitness",
-    trainer_id: 1
+    trainer_id: 1,
   },
   {
     first_name: "Charles",
@@ -66,10 +66,11 @@ const clientdata = [
     username: "jonas",
     password: "done",
     interest: "yoga",
-    trainer_id: 7
-  }
+    trainer_id: 7,
+  },
 ];
 
-const seedClient = () => Client.bulkCreate(clientdata);
+const seedClient = () =>
+  Client.bulkCreate(clientdata, { individualHooks: true });
 
 module.exports = seedClient;

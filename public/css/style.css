@@ -119,10 +119,6 @@ select {
   margin-top: 35px;
 }
 
-.page-header {
-  margin-top: 150px;
-}
-
-.client-data h2 {
-  margin: 100px 100px;
+.main {
+  margin: 150px 0 0 300px;
 }
